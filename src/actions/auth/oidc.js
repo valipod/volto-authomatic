@@ -21,6 +21,20 @@ export function oidcRedirect(providerId) {
 }
 
 /**
+ * The Single Sign Out is not yet implemented so the oidcRedirect function above
+ * will not be called. A logout will be performed and the state will be set
+ * to initial istead
+ * @function oidcNoRedirect
+ * @param {string} providerId OAuth provider id.
+ * @returns {Object} OIDC no redirect action.
+ */
+export function oidcNoRedirect(providerId) {
+  return {
+    type: `${OIDC_REDIRECT}_NO_REDIRECT`,
+  };
+}
+
+/**
  * Logout from OIDC provider
  * @function oidcLogout
  * @returns {Object} OIDC redirect action.

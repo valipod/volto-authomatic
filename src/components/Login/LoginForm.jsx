@@ -25,7 +25,6 @@ const messages = defineMessages({
  * @returns {JSX.Element} Markup of the Login page.
  */
 function LoginForm({ intl, loading, providers, action, onSelectProvider }) {
-  const validProviders = providers.filter((provider) => provider.id !== 'oidc');
   return (
     <div id="page-login">
       <Helmet title={intl.formatMessage(messages.Login)} />
@@ -37,18 +36,7 @@ function LoginForm({ intl, loading, providers, action, onSelectProvider }) {
           <Segment secondary>
             <FormattedMessage id="Select Login Provider" defaultMessage="Select Login Provider" />
           </Segment>
-          <Segment className="form">
-            {!loading && validProviders && <AuthProviders providers={validProviders} action={action} onSelectProvider={onSelectProvider} />}
-            {(loading || validProviders.length === 0) && (
-              <Dimmer.Dimmable as={Segment} dimmed={true}>
-                <Dimmer active inverted>
-                  <Loader size={'small'} inline="centered">
-                    {intl.formatMessage(messages.loading)}
-                  </Loader>
-                </Dimmer>
-              </Dimmer.Dimmable>
-            )}
-          </Segment>
+          <Segment className="form">{!loading && providers && <AuthProviders providers={providers} action={action} onSelectProvider={onSelectProvider} />}</Segment>
         </Segment.Group>
       </Container>
     </div>

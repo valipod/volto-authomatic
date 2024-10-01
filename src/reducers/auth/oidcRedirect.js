@@ -49,6 +49,15 @@ export default function oidcRedirect(state = initialState, action = {}) {
         session: null,
         error: action.error.response.error,
       };
+    case `${OIDC_REDIRECT}_NO_REDIRECT`:
+      return {
+        ...state,
+        next_url: null,
+        session: null,
+        oidcAuth: false,
+        loading: false,
+        error: null,
+      };
     default:
       return state;
   }

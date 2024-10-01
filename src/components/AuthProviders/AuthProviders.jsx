@@ -16,11 +16,11 @@ import './AuthProviders.css';
  */
 function AuthProviders({ providers, action, onSelectProvider }) {
   return (
-    <Container id="authenticationProviders">
+    <div id="authenticationProviders">
       {providers.map(function (provider, i) {
-        return provider && provider.id !== 'oidc' && <AuthProvider key={i} provider={provider} action={action} onSelectProvider={onSelectProvider} />;
+        return provider && <AuthProvider key={i} provider={provider} action={action} onSelectProvider={onSelectProvider} />;
       })}
-    </Container>
+    </div>
   );
 }
 
