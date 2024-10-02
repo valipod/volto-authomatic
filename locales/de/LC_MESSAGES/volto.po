@@ -20,51 +20,99 @@ msgstr ""
 #: components/LoginOIDC/LoginOIDC
 # defaultMessage: Authenticating
 msgid "Authenticating"
-msgstr ""
+msgstr "Authentifizierung"
 
 #: components/LoginAuthomatic/LoginAuthomatic
 #: components/LoginOIDC/LoginOIDC
 # defaultMessage: Authentication failed.
 msgid "Authentication failed."
-msgstr ""
+msgstr "Authentifizierung fehlgeschlagen"
+
+#: components/Login/Login
+# defaultMessage: Both email address and password are case sensitive, check that caps lock is not enabled.
+msgid "Both email address and password are case sensitive, check that caps lock is not enabled."
+msgstr "Bei der E-Mail-Adresse und beim Passwort muss die Groß- und Kleinschreibung beachtet werden. Stellen Sie sicher, dass die Feststelltaste nicht aktiviert ist."
+
+#: components/Login/Login
+# defaultMessage: Cancel
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: components/Login/Login
+# defaultMessage: Error
+msgid "Error"
+msgstr "Fehler"
 
 #: components/Login/LoginForm
 # defaultMessage: Loading
 msgid "Loading"
-msgstr ""
+msgstr "Lade"
 
+#: components/Login/Login
 #: components/Login/LoginForm
 # defaultMessage: Login
 msgid "Log In"
-msgstr ""
+msgstr "Anmelden"
+
+#: components/Login/Login
+# defaultMessage: Log in
+msgid "Log in"
+msgstr "Anmelden"
 
 #: components/AuthProvider/AuthProvider
 # defaultMessage: Log in with
 msgid "Log in with"
-msgstr ""
+msgstr "Anmelden mit"
 
+#: components/Login/Login
 #: components/Login/LoginForm
 # defaultMessage: Login
 msgid "Login"
-msgstr ""
+msgstr "Anmelden"
 
+#: components/Login/Login
 #: components/LoginAuthomatic/LoginAuthomatic
 #: components/LoginOIDC/LoginOIDC
 # defaultMessage: Login Failed
 msgid "Login Failed"
-msgstr ""
+msgstr "Authentifizierung fehlgeschlagen"
+
+#: components/Login/Login
+# defaultMessage: Login Name
+msgid "Login Name"
+msgstr "Benutzername"
+
+#: components/Login/Login
+# defaultMessage: Password
+msgid "Password"
+msgstr "Passwort"
+
+#: components/Login/Login
+# defaultMessage: Register
+msgid "Register"
+msgstr "Registrieren"
 
 #: components/Login/LoginForm
 # defaultMessage: Select Login Provider
 msgid "Select Login Provider"
-msgstr ""
+msgstr "Authentifizierungsanbieter auswählen"
+
+#: components/Login/Login
+# defaultMessage: Sign in to start session
+msgid "Sign in to start session"
+msgstr "Melden Sie sich an, um die Sitzung zu starten"
 
 #: components/AuthProvider/AuthProvider
 # defaultMessage: Sign up with
 msgid "Sign up with"
-msgstr ""
+msgstr "Registrieren mit"
 
 #: components/Logout/Logout
 # defaultMessage: You have been logged out
 msgid "You have been logged out"
-msgstr ""
+msgstr "Sie wurden abgemeldet"
+
+#: components/Login/Login
+# defaultMessage: Forgot your password?
+msgid "box_forgot_password_option"
+msgstr "Passwort vergessen?"

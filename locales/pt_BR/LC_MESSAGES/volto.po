@@ -28,36 +28,79 @@ msgstr "Autenticando"
 msgid "Authentication failed."
 msgstr "Falha na autenticaćão."
 
+#: components/Login/Login
+# defaultMessage: Both email address and password are case sensitive, check that caps lock is not enabled.
+msgid "Both email address and password are case sensitive, check that caps lock is not enabled."
+msgstr ""
+
+#: components/Login/Login
+# defaultMessage: Cancel
+msgid "Cancel"
+msgstr ""
+
+#: components/Login/Login
+# defaultMessage: Error
+msgid "Error"
+msgstr ""
+
 #: components/Login/LoginForm
 # defaultMessage: Loading
 msgid "Loading"
 msgstr ""
 
+#: components/Login/Login
 #: components/Login/LoginForm
 # defaultMessage: Login
 msgid "Log In"
 msgstr "Entrar"
+
+#: components/Login/Login
+# defaultMessage: Log in
+msgid "Log in"
+msgstr ""
 
 #: components/AuthProvider/AuthProvider
 # defaultMessage: Log in with
 msgid "Log in with"
 msgstr "Entrar com"
 
+#: components/Login/Login
 #: components/Login/LoginForm
 # defaultMessage: Login
 msgid "Login"
 msgstr "Acessar"
 
+#: components/Login/Login
 #: components/LoginAuthomatic/LoginAuthomatic
 #: components/LoginOIDC/LoginOIDC
 # defaultMessage: Login Failed
 msgid "Login Failed"
 msgstr "Falha no acesso"
 
+#: components/Login/Login
+# defaultMessage: Login Name
+msgid "Login Name"
+msgstr ""
+
+#: components/Login/Login
+# defaultMessage: Password
+msgid "Password"
+msgstr ""
+
+#: components/Login/Login
+# defaultMessage: Register
+msgid "Register"
+msgstr ""
+
 #: components/Login/LoginForm
 # defaultMessage: Select Login Provider
 msgid "Select Login Provider"
 msgstr "Escolha o provedor de autenticaćão"
+
+#: components/Login/Login
+# defaultMessage: Sign in to start session
+msgid "Sign in to start session"
+msgstr ""
 
 #: components/AuthProvider/AuthProvider
 # defaultMessage: Sign up with
@@ -67,4 +110,9 @@ msgstr "Cadastrar usando"
 #: components/Logout/Logout
 # defaultMessage: You have been logged out
 msgid "You have been logged out"
+msgstr ""
+
+#: components/Login/Login
+# defaultMessage: Forgot your password?
+msgid "box_forgot_password_option"
 msgstr ""

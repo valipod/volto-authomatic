@@ -81,13 +81,11 @@ const Login = (props) => {
   const token = useSelector((state) => state.userSession.token, shallowEqual);
   const error = useSelector((state) => state.userSession.login.error);
   const loading = useSelector((state) => state.userSession.login.loading);
-  const authomaticLoading = useSelector((state) => state.authOptions.loading);
   const options = useSelector((state) => state.authOptions.options);
   const loginOAuthValues = useSelector((state) => state.authomaticRedirect);
   const loginOIDCValues = useSelector((state) => state.oidcRedirect);
   const [, setCookie] = useCookies();
-  console.log(loginOIDCValues);
-
+  
   const returnUrl = qs.parse(props.location?.search ?? location.search).return_url || location.pathname.replace(/\/login\/?$/, '').replace(/\/logout\/?$/, '') || '/';
 
   useEffect(() => {
