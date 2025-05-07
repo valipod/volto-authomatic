@@ -5,8 +5,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { Container } from 'semantic-ui-react';
-//import { oidcNoRedirect } from '../../actions';
-import { oidcNoRedirect } from '../../actions';
+// import { oidcNoRedirect } from '../../actions';
+import { oidcLogout } from '../../actions';
 import { defineMessages, injectIntl } from 'react-intl';
 import { logout, purgeMessages } from '@plone/volto/actions';
 import { useSelector, useDispatch } from 'react-redux';
@@ -33,8 +33,8 @@ function Logout({ intl }) {
     const isOIDC = loginOIDCValues.next_url;
     if (isOIDC) {
       // Not needed for now, to be seen when the SSOut is implemented
-      //dispatch(oidcLogout());
-      dispatch(oidcNoRedirect());
+      dispatch(oidcLogout());
+      //dispatch(oidcNoRedirect());
     } else {
       setDisplayLogout(true);
     }
@@ -47,8 +47,8 @@ function Logout({ intl }) {
     if (next_url) {
       // Give time to save state to localstorage
       setTimeout(function () {
-        // Not redirect to SSOut, to be seen when the SSOut is implemented
-        //window.location.href = next_url;
+        // Redirect to SSOut
+        window.location.href = next_url;
       }, 500);
     }
   }, [logoutOIDCValues]);
