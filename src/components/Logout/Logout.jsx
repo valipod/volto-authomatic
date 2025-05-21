@@ -32,7 +32,6 @@ function Logout({ intl }) {
   useEffect(() => {
     const isOIDC = loginOIDCValues.next_url;
     if (isOIDC) {
-      // Not needed for now, to be seen when the SSOut is implemented
       dispatch(oidcLogout());
       //dispatch(oidcNoRedirect());
     } else {
