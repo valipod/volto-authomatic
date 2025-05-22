@@ -33,8 +33,9 @@ export default function oidcLogout(state = initialState, action = {}) {
       return {
         ...state,
         loading: false,
-        next_url: action.result.next_url,
-        came_from: action.result.came_from,
+        oidcAuth: false,
+        next_url: null,
+        came_from: null,
         error: null,
       };
     case `${LOGOUT_OIDC}_FAIL`:
