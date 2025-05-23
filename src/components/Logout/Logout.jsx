@@ -5,7 +5,6 @@
 
 import React, { useEffect, useState } from 'react';
 import { Container } from 'semantic-ui-react';
-// import { oidcNoRedirect } from '../../actions';
 import { oidcLogout } from '../../actions';
 import { defineMessages, injectIntl } from 'react-intl';
 import { logout, purgeMessages } from '@plone/volto/actions';
@@ -33,7 +32,6 @@ function Logout({ intl }) {
     const isOIDC = loginOIDCValues.next_url;
     if (isOIDC) {
       dispatch(oidcLogout());
-      //dispatch(oidcNoRedirect());
     } else {
       setDisplayLogout(true);
     }
