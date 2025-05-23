@@ -3,7 +3,7 @@
  * @module reducers/authomaticRedirect/authomaticRedirect
  */
 
-import { AUTHOMATIC_REDIRECT } from '../../constants/ActionTypes';
+import { AUTHOMATIC_REDIRECT, LOGOUT_OIDC } from '../../constants/ActionTypes';
 
 const initialState = {
   next_url: null,
@@ -44,6 +44,15 @@ export default function authomaticRedirect(state = initialState, action = {}) {
         next_url: null,
         session: null,
         error: action.error.response.error,
+      };
+    case `${LOGOUT_OIDC}_SUCCESS`:
+      return {
+        ...state,
+        loading: false,
+        next_url: null,
+        session: null,
+        error: null,
+        oidcAuth: false,
       };
     default:
       return state;
