@@ -1,9 +1,9 @@
 /**
- * OIDC redirect reducer.
- * @module reducers/auth/oidcRedirect
+ * OIDC logout reducer.
+ * @module reducers/auth/oidcLogout
  */
 
-import { LOGOUT_OIDC } from '../../constants/ActionTypes';
+import { LOGOUT_OIDC, PLONE_LOGOUT } from '../../constants/ActionTypes';
 
 const initialState = {
   next_url: null,
@@ -45,6 +45,15 @@ export default function oidcLogout(state = initialState, action = {}) {
         next_url: null,
         came_from: null,
         error: action.error.response.error,
+      };
+    case `${PLONE_LOGOUT}`:
+      return {
+        ...state,
+        loading: false,
+        oidcAuth: false,
+        next_url: null,
+        came_from: null,
+        error: null,
       };
     default:
       return state;
