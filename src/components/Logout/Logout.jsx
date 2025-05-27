@@ -30,11 +30,11 @@ function Logout({ intl }) {
 
   useEffect(() => {
     const isOIDC = loginOIDCValues.next_url;
+    setDisplayLogout(true);
     if (isOIDC) {
       dispatch(oidcLogout());
     } else {
       dispatch(ploneLogout());
-      setDisplayLogout(true);
       // We only dispatch logout if we are not using OIDC (in that case the SLO takes care of it)
       dispatch(logout());
     }
