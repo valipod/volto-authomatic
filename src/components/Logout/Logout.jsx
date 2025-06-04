@@ -5,7 +5,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Container } from 'semantic-ui-react';
-import { oidcLogout, ploneLogout } from '../../actions';
+import { oidcLogout } from '../../actions';
 import { defineMessages, injectIntl } from 'react-intl';
 import { logout, purgeMessages } from '@plone/volto/actions';
 import { useSelector, useDispatch } from 'react-redux';
@@ -34,7 +34,6 @@ function Logout({ intl }) {
     if (isOIDC) {
       dispatch(oidcLogout());
     } else {
-      dispatch(ploneLogout());
       // We only dispatch logout if we are not using OIDC (in that case the SLO takes care of it)
       dispatch(logout());
     }

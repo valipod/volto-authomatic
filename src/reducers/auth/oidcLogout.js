@@ -3,7 +3,7 @@
  * @module reducers/auth/oidcLogout
  */
 
-import { LOGOUT_OIDC, PLONE_LOGOUT } from '../../constants/ActionTypes';
+import { LOGOUT_OIDC, PLONE_LOGIN } from '../../constants/ActionTypes';
 
 const initialState = {
   next_url: null,
@@ -46,7 +46,7 @@ export default function oidcLogout(state = initialState, action = {}) {
         came_from: null,
         error: action.error.response.error,
       };
-    case `${PLONE_LOGOUT}`:
+    case `${PLONE_LOGIN}`:
       return {
         ...state,
         loading: false,

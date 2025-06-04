@@ -9,4 +9,4 @@ export const AUTHOMATIC_REDIRECT = 'AUTHOMATIC_LOGIN_START';
 export const OIDC_REDIRECT = 'OIDC_LOGIN_START';
 export const LOGIN = 'LOGIN';
 export const LOGOUT_OIDC = 'LOGOUT_OIDC';
-export const PLONE_LOGOUT = 'PLONE_LOGOUT';
+export const PLONE_LOGIN = 'PLONE_LOGIN';

@@ -14,7 +14,7 @@ import { Toast } from '@plone/volto/components';
 import aheadSVG from '@plone/volto/icons/ahead.svg';
 import clearSVG from '@plone/volto/icons/clear.svg';
 
-import { authomaticRedirect, listAuthOptions, oidcRedirect } from '../../actions';
+import { authomaticRedirect, listAuthOptions, oidcRedirect, ploneLogin } from '../../actions';
 import AuthProviders from '../AuthProviders/AuthProviders';
 import { useCookies } from 'react-cookie';
 
@@ -143,6 +143,7 @@ const Login = (props) => {
 
   const onLogin = (event) => {
     dispatch(login(document.getElementsByName('login')[0].value, document.getElementsByName('password')[0].value));
+    dispatch(ploneLogin());
     event.preventDefault();
   };
 

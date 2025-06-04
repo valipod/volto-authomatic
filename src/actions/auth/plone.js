@@ -2,16 +2,16 @@
  * Plone Login
  * @module actions/auth/plone
  */
-import { PLONE_LOGOUT } from '../../constants/ActionTypes';
+import { PLONE_LOGIN } from '../../constants/ActionTypes';
 
 /**
- * Dispatches an action to log out from Plone auth.
+ * Dispatches an action to log in with a local Plone user.
  * Will be used to clear the leftover next_url from a possible previous OIDC login.
- * @function ploneLogout
- * @returns {Object} Plone log out.
+ * @function ploneLogin
+ * @returns {Object} Plone log in.
  */
-export function ploneLogout() {
+export function ploneLogin() {
   return {
-    type: `${PLONE_LOGOUT}`,
+    type: `${PLONE_LOGIN}`,
   };
 }

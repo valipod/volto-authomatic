@@ -4,6 +4,8 @@ import LoginOIDC from './components/LoginOIDC/LoginOIDC';
 import Logout from './components/Logout/Logout';
 import { authomaticRedirect, authOptions, oidcLogout, oidcRedirect } from './reducers';
 import { Login as VoltoLogin } from '@plone/volto/components';
+import authMiddleware from './middleware/authMiddleware';
+
 
 const applyConfig = (config) => {
   config.addonReducers = {
@@ -29,6 +31,11 @@ const applyConfig = (config) => {
     { path: '/login-authomatic/:provider', component: LoginAuthomatic },
     { path: '/login-oidc/:provider', component: LoginOIDC },
   );
+  config.settings.storeExtenders = [
+    ...(config.settings.storeExtenders || []),
+    authMiddleware,
+  ];
+
   return config;
 };
 

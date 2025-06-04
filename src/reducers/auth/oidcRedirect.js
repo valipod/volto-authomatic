@@ -3,7 +3,7 @@
  * @module reducers/auth/oidcRedirect
  */
 
-import { OIDC_REDIRECT, LOGOUT_OIDC } from '../../constants/ActionTypes';
+import { OIDC_REDIRECT, LOGOUT_OIDC, PLONE_LOGIN } from '../../constants/ActionTypes';
 
 const initialState = {
   next_url: null,
@@ -57,6 +57,15 @@ export default function oidcRedirect(state = initialState, action = {}) {
         session: null,
         error: null,
         oidcAuth: false,
+      };
+    case `${PLONE_LOGIN}`:
+      return {
+        ...state,
+        loading: false,
+        oidcAuth: false,
+        next_url: null,
+        came_from: null,
+        error: null,
       };
     default:
       return state;
